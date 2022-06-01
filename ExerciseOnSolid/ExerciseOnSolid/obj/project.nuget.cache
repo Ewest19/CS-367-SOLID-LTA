@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wyl+n+Rz2jbEg8GWUbTWXYHqzFxUciILUx8j0YeiWcJna3Bowx0TILfw/Xqxj4lam4BkyP0uiZxjn8IimST7Yg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\emmer\\Documents\\AA_School\\Spring 2022\\CS 367\\SOLID LTA\\CS-367-SOLID-LTA\\ExerciseOnSolid\\ExerciseOnSolid\\ExerciseOnSolid.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emmer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
