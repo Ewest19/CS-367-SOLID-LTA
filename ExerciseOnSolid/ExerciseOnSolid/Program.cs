@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using ExerciseOnSolid.Devices;
 using ExerciseOnSolid.Networks;
+using ExerciseOnSolid.NetworkServices;
 
 namespace ExerciseOnSolid
 {
@@ -8,10 +10,22 @@ namespace ExerciseOnSolid
     {
         public static void Main(string[] args)
         {
-            var lucasSmartPhone = new SmartPhone("503-867-5309");
-            var petersSmartPhone = new SmartPhone("503-555-9876");
-            var lanasSmartWatch = new CellularSmartWatch("503-555-1234");
-            var wafflesChildPhone = new ChildPhone("503-555-4321");
+            var lucasSmartPhone = new SmartPhone(new SkynetWireless() {DevicePhoneNumber= "503-867-5309"});
+            var petersSmartPhone = new SmartPhone(new SkynetWireless() {DevicePhoneNumber= "503-555-9876"});
+            var lanasSmartWatch = new CellularSmartWatch(new SkynetWireless() {DevicePhoneNumber= "503-555-1234"});
+            var wafflesChildPhone = new ChildPhone(new LegionWireless() {DevicePhoneNumber= "503-555-4321"});
+
+            var devices = new List<ICall>();
+            devices.Add(lucasSmartPhone);
+            devices.Add(petersSmartPhone);
+            devices.Add(lanasSmartWatch);
+            devices.Add(wafflesChildPhone);
+
+            foreach (var device in devices)
+            {
+                device.PlaceCall("5039498513");
+            }
+
 
             Console.WriteLine("A day in the Cordova household with two Doodles...");
 

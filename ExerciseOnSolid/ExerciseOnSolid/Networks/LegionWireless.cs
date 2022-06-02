@@ -2,7 +2,8 @@
 
 namespace ExerciseOnSolid.Networks
 {
-    public class LegionWireless
+
+    public class LegionWireless : INetwork
     {
         public string CarrierName { get; init; } = "LEGION Wireless";
         public string DevicePhoneNumber { get; init; }

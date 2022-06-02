@@ -1,11 +1,13 @@
 ﻿using ExerciseOnSolid.Networks;
+using ExerciseOnSolid.NetworkServices;
 
 namespace ExerciseOnSolid.Devices
 {
-    public class SmartPhone
+
+    public class SmartPhone : ICall, ITextMessage, IPlaceVideoCall, IBrowseInternet
     {
-        private readonly SkynetWireless _cellularNetwork;
-        public SmartPhone(string phoneNumber) => _cellularNetwork = new SkynetWireless() { DevicePhoneNumber = phoneNumber };
+        private readonly INetwork _cellularNetwork;
+        public SmartPhone(INetwork network) => _cellularNetwork = network;
         public NetworkStatus PlaceCall(string phoneNumber) => _cellularNetwork.PlaceCall(phoneNumber);
         public NetworkStatus PlaceVideoCall(string phoneNumber) => _cellularNetwork.PlaceVideoCall(phoneNumber);
         public NetworkStatus SendTextMessage(string phoneNumber, string message) => _cellularNetwork.SendTextMessage(phoneNumber, message);

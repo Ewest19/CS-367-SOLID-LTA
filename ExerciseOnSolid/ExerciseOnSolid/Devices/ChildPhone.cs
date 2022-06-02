@@ -1,11 +1,12 @@
 ﻿using ExerciseOnSolid.Networks;
+using ExerciseOnSolid.NetworkServices;
 
 namespace ExerciseOnSolid.Devices
 {
-    public class ChildPhone
+    public class ChildPhone : ICall
     {
-        private readonly LegionWireless _cellularNetwork;
-        public ChildPhone(string phoneNumber) => _cellularNetwork = new LegionWireless() { DevicePhoneNumber = phoneNumber };
+        private readonly INetwork _cellularNetwork;
+        public ChildPhone(INetwork network) => _cellularNetwork = network;
         public NetworkStatus PlaceCall(string phoneNumber) => _cellularNetwork.PlaceCall(phoneNumber);
         public string PhoneNumber => _cellularNetwork.DevicePhoneNumber;
     }

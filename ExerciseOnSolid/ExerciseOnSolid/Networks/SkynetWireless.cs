@@ -2,7 +2,7 @@
 
 namespace ExerciseOnSolid.Networks
 {
-    public class SkynetWireless
+    public class SkynetWireless: INetwork
     {
         public string CarrierName { get; init;  } = "SKYNET Wireless";
         public string DevicePhoneNumber { get; init; }
