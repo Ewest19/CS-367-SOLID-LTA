@@ -1,9 +1,10 @@
 ﻿using System;
+using ExerciseOnSolid.NetworkPackages;
 
 namespace ExerciseOnSolid.Networks
 {
 
-    public class LegionWireless : INetwork
+    public class LegionWireless : INetwork, INetworkPlaceCall, INetworksendTextMessage, INetworkBrowseInternet, INetworkPlaceVideoCall
     {
         public string CarrierName { get; init; } = "LEGION Wireless";
         public string DevicePhoneNumber { get; init; }

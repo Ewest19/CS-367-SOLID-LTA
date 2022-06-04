@@ -1,8 +1,9 @@
 ﻿using System;
+using ExerciseOnSolid.NetworkPackages;
 
 namespace ExerciseOnSolid.Networks
 {
-    public class SkynetWireless: INetwork
+    public class SkynetWireless: INetwork, INetworkPlaceCall, INetworksendTextMessage, INetworkBrowseInternet, INetworkPlaceVideoCall
     {
         public string CarrierName { get; init;  } = "SKYNET Wireless";
         public string DevicePhoneNumber { get; init; }
